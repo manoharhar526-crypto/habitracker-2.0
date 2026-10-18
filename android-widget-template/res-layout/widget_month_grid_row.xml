@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:paddingTop="3dp" android:paddingBottom="3dp">
+
+    <TextView android:id="@+id/habit_name" android:layout_width="60dp" android:layout_height="wrap_content"
+        android:textColor="#e7e9ee" android:textSize="11sp" android:singleLine="true" android:ellipsize="end" />
+
+    <TextView android:id="@+id/cell_1" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+    <TextView android:id="@+id/cell_2" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+    <TextView android:id="@+id/cell_3" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+    <TextView android:id="@+id/cell_4" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+    <TextView android:id="@+id/cell_5" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+    <TextView android:id="@+id/cell_6" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+    <TextView android:id="@+id/cell_7" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+        android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:gravity="center"
+        android:textSize="11sp" android:textStyle="bold" android:background="@drawable/widget_cell" />
+</LinearLayout>

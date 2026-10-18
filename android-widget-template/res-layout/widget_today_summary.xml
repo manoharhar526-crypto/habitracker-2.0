@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="14dp" android:background="@drawable/widget_bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/title" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:textColor="#FFFFFF" android:textSize="14sp"
+            android:textStyle="bold" android:letterSpacing="0.02" android:text="Today" />
+        <TextView android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#8b8f98" android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/stats" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+        android:background="@drawable/widget_card" android:padding="10dp" android:layout_marginTop="10dp">
+        <TextView android:id="@+id/pct" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" android:textSize="34sp" android:textStyle="bold" android:text="0%" />
+        <TextView android:id="@+id/count" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:paddingTop="2dp" android:textColor="#E7E9EE" android:textSize="11sp" android:text="0 of 0 habits" />
+        <TextView android:id="@+id/streak" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:paddingTop="6dp" android:textColor="#8b8f98" android:textSize="10sp" android:text="" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/empty" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:gravity="center" android:visibility="gone"
+        android:textColor="#8b8f98" android:textSize="11sp" android:text="Open app to sync" />
+</LinearLayout>

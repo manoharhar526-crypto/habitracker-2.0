@@ -1,0 +1,1 @@
+-- No default administrator is provisioned. Assign an existing verified account via a controlled server-side process.

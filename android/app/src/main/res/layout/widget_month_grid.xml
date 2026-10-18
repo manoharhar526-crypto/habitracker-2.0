@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp" android:background="@drawable/widget_bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"
+            android:letterSpacing="0.02" android:text="Weekly Tracking" />
+        <TextView android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#8b8f98" android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Week navigator -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="10dp" android:paddingBottom="8dp">
+        <TextView android:id="@+id/week_prev" android:layout_width="30dp" android:layout_height="26dp"
+            android:background="@drawable/widget_pill" android:gravity="center"
+            android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" android:text="‹" />
+        <TextView android:id="@+id/week_label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" />
+        <TextView android:id="@+id/week_next" android:layout_width="30dp" android:layout_height="26dp"
+            android:background="@drawable/widget_pill" android:gravity="center"
+            android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" android:text="›" />
+        <TextView android:id="@+id/week_today" android:layout_width="wrap_content" android:layout_height="26dp"
+            android:layout_marginStart="6dp" android:background="@drawable/widget_pill" android:gravity="center"
+            android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" android:text="Today" />
+    </LinearLayout>
+
+    <!-- Day-of-week header, aligned with the row cells -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="4dp">
+        <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="S" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="M" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="T" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="W" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="T" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="F" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="#6b7280" android:textSize="9sp" android:textStyle="bold" android:text="S" />
+    </LinearLayout>
+
+    <ListView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:divider="@null" android:dividerHeight="0dp" />
+
+    <TextView android:id="@+id/empty" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textColor="#8b8f98" android:textSize="11sp" android:gravity="center"
+        android:paddingTop="12dp" android:text="No habits yet — open the app" />
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textColor="#5b6068" android:textSize="9sp" android:paddingTop="6dp" android:gravity="center"
+        android:text="Tap a day to check it off" />
+</LinearLayout>

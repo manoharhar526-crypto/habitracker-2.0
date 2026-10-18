@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/note_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="14dp"
+        android:text="Note" />
+
+    <EditText
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/widget_card"
+        android:padding="12dp"
+        android:hint="Title"
+        android:textColorHint="#8A8F98"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:inputType="textCapSentences"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/note_body"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/widget_card"
+        android:padding="12dp"
+        android:gravity="top|start"
+        android:hint="Details (optional)"
+        android:textColorHint="#8A8F98"
+        android:textColor="#E7E9EE"
+        android:textSize="14sp"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_cell"
+            android:textColor="#B8BCC4"
+            android:textAllCaps="false"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/widget_cell"
+            android:textColor="#E7E9EE"
+            android:textAllCaps="false"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/widget_cell_today"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:text="Save" />
+    </LinearLayout>
+</LinearLayout>

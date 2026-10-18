@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#141414" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Habitracker - Daily Habit &amp; Goal Tracker</title>
+    <meta name="description" content="Track your daily habits, set weekly and monthly goals, and build better routines with Habitracker. Free habit tracking app with analytics and backup.">
+    <meta name="author" content="Habitracker" />
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/DcPDaV0r7HRgZuRDcHCmFmDNjom1/social-images/social-1772786447979-15621.webp">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/DcPDaV0r7HRgZuRDcHCmFmDNjom1/social-images/social-1772786447979-15621.webp">
+    
+    
+    
+    
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('habit_tracker_theme');
+          document.documentElement.classList.remove('light','dark');
+          document.documentElement.classList.add(t === 'light' ? 'light' : 'dark');
+        } catch(e) {}
+      })();
+    </script>
+  <meta property="og:title" content="Habitracker - Daily Habit &amp; Goal Tracker">
+  <meta name="twitter:title" content="Habitracker - Daily Habit &amp; Goal Tracker">
+  <meta property="og:description" content="Track your daily habits, set weekly and monthly goals, and build better routines with Habitracker. Free habit tracking app with analytics and backup.">
+  <meta name="twitter:description" content="Track your daily habits, set weekly and monthly goals, and build better routines with Habitracker. Free habit tracking app with analytics and backup.">
+</head>
+
+  <body style="background-color:#141414;margin:0;padding:0;">
+    <div id="root" style="background-color:#141414;min-height:100vh;"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

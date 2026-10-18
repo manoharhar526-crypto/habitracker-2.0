@@ -1,0 +1,65 @@
+{
+  "name": "Habitracker",
+  "short_name": "Habitracker",
+  "description": "Track your daily habits, set goals, and build better routines.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141414",
+  "theme_color": "#141414",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Monthly Tracking Grid",
+      "short_name": "Habit Grid",
+      "description": "View your monthly habit tracking grid",
+      "url": "/?tab=habits&section=monthly-grid",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Habit Skip Days",
+      "short_name": "Skip Days",
+      "description": "Manage skip days for your habits",
+      "url": "/?tab=habits&section=skip-days",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Habit Analytics",
+      "short_name": "Analytics",
+      "description": "View habit analytics and charts",
+      "url": "/?tab=habits&section=habit-analytics",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Goals Calendar",
+      "short_name": "Calendar",
+      "description": "Open the goals calendar",
+      "url": "/?tab=goals&section=calendar",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "All-Time Statistics",
+      "short_name": "All-Time Stats",
+      "description": "View all-time habit statistics",
+      "url": "/?tab=reports&section=all-time-stats",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Habit Report",
+      "short_name": "Habit Report",
+      "description": "Detailed habit report and streaks",
+      "url": "/?tab=reports&section=habit-report",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

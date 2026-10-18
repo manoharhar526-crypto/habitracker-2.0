@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792210420531,
+      "tag": "0000_baseline_roles_profiles_backups",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792210468935,
+      "tag": "0001_user_sync_data",
+      "breakpoints": true
+    }
+  ]
+}

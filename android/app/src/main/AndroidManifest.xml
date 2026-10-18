@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="internalOnly">
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBarLaunch"
+            android:launchMode="singleTask"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+        <!-- HABITRACKER_WIDGETS_BEGIN -->
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.MonthGridWidget" android:exported="true" android:label="@string/widget_month_grid">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_month_grid"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.SkipDaysWidget" android:exported="true" android:label="@string/widget_skip_days">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_skip_days"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.AnalyticsWidget" android:exported="true" android:label="@string/widget_analytics">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_analytics"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.CalendarWidget" android:exported="true" android:label="@string/widget_calendar">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_calendar"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.AllTimeStatsWidget" android:exported="true" android:label="@string/widget_all_time_stats">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_all_time_stats"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.HabitReportsWidget" android:exported="true" android:label="@string/widget_habit_reports">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_habit_reports"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.TaskReportsWidget" android:exported="true" android:label="@string/widget_task_reports">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_task_reports"/>
+        </receiver>
+        
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.YearCardWidget" android:exported="true" android:label="@string/widget_year_card">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_year_card"/>
+        </receiver>
+        <receiver android:icon="@mipmap/ic_launcher" android:enabled="true" android:name="com.habitracker.app.widgets.TodaySummaryWidget" android:exported="true" android:label="@string/widget_today_summary">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info_today_summary"/>
+        </receiver>
+        
+        <!-- Tap-to-toggle broadcast receiver — writes pending habit toggles into
+             SharedPreferences and refreshes affected widgets. -->
+        <receiver android:icon="@mipmap/ic_launcher" android:name="com.habitracker.app.widgets.HabitToggleReceiver" android:enabled="true" android:exported="false"/>
+        
+        <!-- Boot receiver — restores periodic widget refresh after device reboot -->
+        <receiver android:icon="@mipmap/ic_launcher" android:name="com.habitracker.app.widgets.BootReceiver" android:enabled="true" android:exported="true" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        
+        <!-- AlarmManager target — fires every 30 min to refresh all widgets -->
+        <receiver android:icon="@mipmap/ic_launcher" android:name="com.habitracker.app.widgets.WidgetAlarmReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        
+        <!-- Backing service for the Monthly Tracking Grid ListView (collection widget) -->
+        <service android:name="com.habitracker.app.widgets.MonthGridRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false"/>
+        
+        <!-- Dialog screen for writing/editing a calendar note straight from the widget -->
+        <activity android:name="com.habitracker.app.widgets.NoteEditorActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"/>
+        <activity android:name="com.habitracker.app.widgets.MonthPickerActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"/>
+        <!-- HABITRACKER_WIDGETS_END -->
+    </application>
+
+    <!-- Permissions -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+</manifest>
